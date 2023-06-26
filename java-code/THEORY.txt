@@ -1,0 +1,130 @@
+Question 
+
+1.Explain the architecture of JVM.
+
+class loader will load the class files into the different areas of jvm.
+different areas of jvm
+1. method area: class code, method code, static variables code
+2. heap area: main memory of jvm , sotres non static variables and all objects.
+3. java stack: information related to current executing method in form of frames
+4. pc registers: pc registers are used to store the address of next instruction.
+5. native method stack: for non java code
+
+execution engine: interprete intreprets and runs the code
+jit (just in time )compiler compiles the code together that is interelated to save time.
+
+Question 
+
+2.Explain the sand box model.
+
+basic idea behind sandbox model is to provide an environment in which remote code does not have acess to alL THE resources in the file only limited resources are shared and boundaries are set.
+
+3 pillers of sandbox model
+1. security manager: to check for potention voilation , has the veto power to throw security exception whenever an applet tries to change the policy file.
+2. class loader: checking namespaces and loading the files into the jvm.
+3. byte code verifier: 
+   a. syntactic analysis: legal variables used and valid instructions to be exected.
+   b. data dlow analysys: running without actually running to check the flow of data.
+
+3 versions
+1.0 security model
+remote code has acess only to the files and resources in sandbox not to the valuable resources.
+1.1 security model
+signed applets are allowed acess to the valuable resources along with local code.
+1.2 security model 
+all the local and remote code has to go through a security policy to get acess to the various set of resources.
+
+Question
+
+3.Explain any 5 operators used in Java Programming.
+
+• Arithmetic Operators(+,-,x,/)--> to perform arithmetic calculations
+• Assignment Operators(=)--> to assign values
+• Relational Operators(<,<=,>,>=,!=,==)--> to check relationship between various operators
+• Logical Operators(||,&&) in decision making checking true and false in relations
+• Unary Operators(++,--)--> used on single operand
+
+
+Question
+
+ 4.Explain various datatypes used in Java Programming.
+	primmitive-> not derived from another datatypes
+		1. numeric--> int float
+			int --> byte,short,int,long
+			float--> float, double
+		2. non numeric--> char boolean 
+	non primitive-> derived from other datatypes
+		class
+		interface
+		array
+		
+
+Question
+
+5.Explain the different types of inheritance used in Java Programming.
+single
+multilevel
+multiple(not allowed application through interfaces)
+hierarchial
+hybrid
+
+
+Question
+
+
+6.Explain different layout managers using Java programming.
+
+The LayoutManagers are used to arrange components in a particular manner. The Java LayoutManagers facilitates us to control the positioning and size of the components in GUI forms. LayoutManager is an interface that is implemented by all the classes of layout managers. There are the following classes that represent the layout managers:
+
+1.java.awt.BorderLayout-->The BorderLayout is used to arrange the components in five regions: north, south, east, west, and center.
+2.java.awt.GridLayout-->The Java GridLayout class is used to arrange the components in a rectangular grid. One component is displayed in each rectangle.
+3.java.awt.CardLayout-->The Java CardLayout class manages the components in such a manner that only one component is visible at a time. It treats each component as a card that is why it is known as CardLayout.
+
+Question
+
+7.Describe different steps of database connectivity with MS-Access and Oracle.
+
+Step 1: Prepare the MS-Access environment. ...
+Step 2: Define ODBC connectivity. ...
+Step 3: Prepare the Oracle Environment. ...
+Step 4: Configure and Start the Oracle Listener. ...
+Step 5: Configure Oracle HS: ...
+Step 6: Configure Oracle connectivity to Windows Machine. ...
+Step 7: Create a database link.
+
+Question
+
+8.Describe remote method invocation in detail.
+
+The Java Remote Method Invocation (RMI) application programming interface (API) enables client and server communications over the net. Typically, client programs send requests to a server program, and the server program responds to those requests.
+
+A common example is sharing a word processing program over a network. The word processor is installed on a server, and anyone who wants to use it starts it from his or her machine by double clicking an icon on the desktop or typing at the command line. The invocation sends a request to a server program for acess to the software, and the server program responds by making the software available to the requestor.
+
+
+Question
+
+applet cycle
+init-->born-->start-->running-->stop-->idle-->destroy-->dead
+running-->paint-->running
+idle-->start-->running
+
+
+Question
+
+thread cycle
+Threads exist in several states.
+Thread is a program with a single flow of control that has a beginning ,a body and an end 
+Following are those states:
+● New – When we create an instance of Thread class, a thread is in a newborn state. A thread at newborn state can 
+be sent to the runnable state by the start method or it may be killed or terminated by the stop method.
+● Runnable – The Java thread in runnable state is waiting in the queue along with other threads for the processer. 
+Once the processor is free it allows a thread to be sent to the running state by automatically executing the run 
+method.
+● Running – A running thread is at the instant when the thread has gotten the processer and the run method is 
+being executed.
+● Blocked – A java thread can be blocked when waiting for a resource. At this step the thread is prevented from 
+being sent to the running stage. This can happen when the thread is suspended or sleeping or waiting due to the 
+requirements of the program.
+● Terminated – A thread can be terminated, which halts its execution immediately at any given time. Once a thread 
+is terminated, it cannot be resumed. This can be done from the newborn stage running stage or the waiting stage 
+with the help of stop method
